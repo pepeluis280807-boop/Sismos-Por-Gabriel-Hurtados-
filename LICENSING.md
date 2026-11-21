@@ -1,0 +1,53 @@
+# Licensing and provenance status
+
+No software or dataset licence is inferred from a public URL alone. The code, bounded evidence package and catalogue additions retain the source-specific rights and credits described here; publication authorization does not change those rights.
+
+## Sequence-science reproduction components
+
+The [audited sequence package](../research/sequences/README.md) is a collection
+with component-specific rights, not a blanket MIT distribution. Its
+[licence map](../research/sequences/LICENSES_MAP.json) links each preserved
+original notice and records pinned source revisions. In particular:
+
+- The normalmix Python port and original Zaliapin nearest-neighbour distribution
+  retain GPL-3.0 as declared by their source. Root MIT does not relicense that
+  derived implementation or a combined GPL-dependent distribution.
+- The separately retained historical GEM `oq-mbtk` source at
+  `d13e63bebedcc6788e0ec88e8632957b749d3b60` remains AGPL-3.0-only. The default
+  clean replay verifies identified historical evidence rather than executing the
+  GEM engine again.
+- The eqclustering comparator retains Apache-2.0, its NOTICE and the explicit
+  Python 3 compatibility diff. The bruces dependency retains BSD-3-Clause.
+  Python dependencies keep their respective notices and locked versions.
+- Original project software keeps its MIT notice. SSN observations retain the
+  original reproduction notice and SSN terms; USGS/ComCat observations retain
+  distributor and contributing-network provenance. Synthetic truth and observation
+  ledgers remain identified as synthetic, with no invented new dataset licence.
+
+The package's [sources and rights](../research/sequences/SOURCES_AND_RIGHTS.json)
+distinguish observed data, assumed synthetic errors, source code and historical
+results. Preserved original source files, complete licence texts and notices are
+plain browseable files. Data archives do not change these rights. No archival DOI,
+institutional endorsement, notification email or editorial submission is implied.
+
+## Existing application, data and manuscript rights
+
+- Original project code and technical documentation are covered by the root `LICENSE`: MIT, copyright 2026 Gabriel Hurtado Avilés. Its scope is the newly authored audit/build scripts, explorer HTML/JavaScript/CSS and project documentation. It does not relicense source observations, acquired API response contents, third-party dependencies, the Word template, scientific manuscript or manuscript figures.
+- The historical seismic software has MIT copyright Gabriel Hurtado (2025). It was inspected, not imported into this repository. Its licence does not license the SSN observations or the AZCATL article.
+- The pinned fuentes-alternas repository identifies MIT for its software and credits Actronix09 and Samy (2026). This project did not execute or copy its Python implementation. Snapshot CSV origins, URLs and SHA-256 values are retained in `data/source_manifest.json`.
+- USGS-authored or produced data are in the U.S. public domain under its [copyright policy](https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits). [ComCat](https://earthquake.usgs.gov/data/comcat/) also distributes source parameters and products contributed by networks worldwide. Preserve `locationSource`, `magSource` and product source/author roles. The [USGS data-licensing guidance](https://www.usgs.gov/data-management/data-licensing) distinguishes federal work, non-federal contributions and underlying facts; it does not authorize this project to assign MIT or CC0 to every contributor's material. Numeric observations are not newly owned by this interface. No imported figures, station waveforms or third-party photographs are packaged with the explorer.
+- The historical SSN-derived SQL and its extracted local records remain excluded. The separate native 6 November 2026 SSN CSV retains its original notice and the observed [SSN data-specific free-use terms](http://www.ssn.unam.mx/aviso-legal/): origin acknowledgement, preserved meaning, third-party rights and no implied UNAM endorsement. The export itself includes a non-commercial reproduction notice; both texts are preserved in `research-data/catalogs/ssn-mx/`. This non-commercial research distribution assigns no new licence to the observations. Terms require notification of published research; no notification email has been sent or authorized.
+- AZCATL identifies CC BY-NC-ND 4.0 for the published antecedent. No text or figure from that article is reused as an original result in the new manuscript.
+- The retained C&G Word template is attributed to the journal's [template repository](https://github.com/cageo/CAGEO_WordTemplate), pinned and hashed in `paper/templates/provenance.json`. Its example scientific content is not displayed in the new manuscript.
+- The explorer bundles Leaflet 1.9.4 under BSD-2-Clause. Its complete copyright and licence notice are retained in `system/dist/vendor/leaflet/LICENSE`; this licence covers Leaflet, not the project's own code or earthquake data.
+- The default geographic background uses Natural Earth 1:50 million country polygons, [public domain under its terms of use](https://www.naturalearthdata.com/about/terms-of-use/). Pinned source commit, source/output hashes and the geographic subset transformation are recorded in `system/dist/data/map_assets.json`. Attribution remains visible in the map.
+- Optional OpenStreetMap, humanitarian OSM, USGS Topo and static NASA Blue Marble backgrounds are requested on demand under their own attribution and service terms. No tiles are included in the repository or acquired in bulk. Their detailed conditions and coverage are recorded in [catalogue and background documentation](CATALOGS.md).
+- The Canadian exploratory catalogue uses the specific [Open Government Earthquakes in Canada resource](https://open.canada.ca/data/en/dataset/4cedd37e-0023-41fe-8eff-bea45385e469), under the [Open Government Licence–Canada](https://open.canada.ca/en/open-government-licence-canada). It contains information licensed under that licence, attributed to Natural Resources Canada / Geological Survey of Canada. The original CSV, receipt and hashes are retained for reproducibility. These terms do not apply automatically to the separate NEDB bulletin or other NRCan products.
+
+The static artifact contains selected native SSN and NRCan records, selected ComCat summary fields, a retained origin-version projection, provenance manifests, local Natural Earth geometry and Leaflet. It excludes the historical SSN SQL, imputed impact tables and the AZCATL article. The frozen ComCat summaries remain attributed to USGS and the contributing agencies, with Actronix09 credited for the pinned distribution snapshot. Public access to observations through ComCat is not described as independent SSN validation or as ownership of the source data.
+
+The prepared `research-data/comcat` reproducibility bundle contains only the 40 official response bodies named by the revision acquisition manifest (four cohort count/query responses and 36 event-detail responses), with their original hashes, requests, retrieval times and response headers, plus the acquisition and package manifests. The exact public-response bytes include public product metadata, including operator aliases and one institutional USGS sender address; these are not Gabriel's private contact details. The acquisition requests have no credentials, authorization parameters or user-machine paths, and the retained headers are only `Content-Type`, `Date`, `ETag` and `Last-Modified`. Some general/impact text is included inline in the official API bodies; no linked external media are downloaded by this bundle. These source bytes and their provenance are preserved without claiming a new blanket licence over all product contributions. Progress files, unused duplicate acquisitions, credentials, local SQL and private review evidence are excluded. This research-data folder is outside the website deployment artifact.
+
+The original-code MIT licence does not relicense the above third-party software, observations, article or template. GitHub versioning can provide access to this documented research bundle, but it is not an archival DOI deposit. No dataset DOI or completed archival deposit is asserted for this bundle.
+
+Any source-specific restrictions discovered during further review and the authors' dataset availability/deposit statement remain submission items. This document records evidence and scope; authorization for each commit, push and publication is governed by Gabriel's current instructions.
